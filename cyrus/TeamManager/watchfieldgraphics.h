@@ -38,6 +38,8 @@ public slots:
     void drawBounds();
     void setCounter(long int c);
     long int getSize();
+    void changeCyrusToYellow();
+    void changeCyrusToBlue();
 
 
 

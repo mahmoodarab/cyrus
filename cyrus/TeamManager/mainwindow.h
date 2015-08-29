@@ -64,6 +64,8 @@ private slots:
         void on_logSeekPlayingHSl_valueChanged(int value);
         void on_logPauseTB_clicked();
         void on_logFileNameLE_textChanged(const QString &arg1);
+        void on_chooseTeamColorBlueRB_clicked();
+        void on_chooseTeamColorYellowRB_clicked();
 };
 
 #endif // MAINWINDOW_H

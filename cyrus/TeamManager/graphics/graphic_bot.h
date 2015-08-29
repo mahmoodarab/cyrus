@@ -7,6 +7,7 @@ class RobotGraphicsItem : public QGraphicsItem
 {
 
 public:
+    Qt::GlobalColor myColor;
     enum Mode{RobotGraphicMode, RobotTargetGraphicMode, BallGraphicMode,
                       NumberGraphicMode, fieldGridGraphicMode, type6,IdGraphic,Time,Half,CurrentResult};
 
@@ -15,6 +16,7 @@ public:
     void setNearest(bool nearest);
     void setTotalNearest(bool nearest);
     void setCanKick(bool can_kick);
+    int  myID;
 
     QImage image;
     RobotGraphicsItem(Qt::GlobalColor color, int id);
@@ -33,9 +35,8 @@ public:
     }
 
 private:
-    Qt::GlobalColor myColor;
+
     Mode myMode;
-    int  myID;
     int myRadius;
     bool isNearest;
     bool IsTotalNearest;

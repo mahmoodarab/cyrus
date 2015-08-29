@@ -189,6 +189,8 @@ void WatchFieldGraphics::initializeQVectors(const char * filename)
     ballVel = new VectorGraphicsItem(Qt::cyan);
     ballTail = new BallGraphicsItem(Qt::red);
 
+    scene.addItem(ball);
+    scene.addItem(ballTail);
 
     ballX = new QVector <double>();
     ballY = new QVector <double>();
@@ -317,10 +319,7 @@ void WatchFieldGraphics::updateGUI()
 {
     for(int tm=0; tm<2; tm++)
         for(int i=0; i< MAX_ID_NUM/2; i++)
-        {
-
-
-
+{
             RobotState rs_;
             rs_.ID = i;
             rs_.color = (Color)tm;
@@ -331,7 +330,6 @@ void WatchFieldGraphics::updateGUI()
         }
     counter++;
 
-    scene.addItem(ball);
     ball->setZValue(7);
     ball->setX(ballX->at(counter));
     ball->setY(ballY->at(counter));
@@ -341,8 +339,28 @@ void WatchFieldGraphics::updateGUI()
     counter++;
 
 
-    scene.addItem(ballTail);
+//    scene.addItem(ballTail);
     ballTail->setZValue(9);
     drawBounds();
 }
 
+void WatchFieldGraphics::changeCyrusToBlue()
+{
+        for(int i=0; i< MAX_ID_NUM/2; i++){
+            number[0][i]->setColor(Qt::blue);
+            robot[0][i]->myColor=(Qt::blue);
+
+            number[1][i]->setColor(Qt::yellow);
+            robot[1][i]->myColor=(Qt::yellow);
+
+        }
+}
+void WatchFieldGraphics::changeCyrusToYellow()
+{
+        for(int i=0; i< MAX_ID_NUM/2; i++){
+            number[1][i]->setColor(Qt::blue);
+            number[0][i]->setColor(Qt::yellow);
+            robot[1][i]->myColor=(Qt::blue);
+            robot[0][i]->myColor=(Qt::yellow);
+        }
+}

@@ -374,3 +374,15 @@ void MainWindow::on_logFileNameLE_textChanged(const QString &arg1)
         }
     }
 }
+
+void MainWindow::on_chooseTeamColorBlueRB_clicked()
+{
+    watchField->changeCyrusToBlue();
+}
+
+
+void MainWindow::on_chooseTeamColorYellowRB_clicked()
+{
+    watchField->changeCyrusToYellow();
+
+}

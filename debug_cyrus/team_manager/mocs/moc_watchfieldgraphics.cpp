@@ -6,7 +6,7 @@
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
-#include "../../../Team_manager/TeamManager/watchfieldgraphics.h"
+#include "../../../cyrus/TeamManager/watchfieldgraphics.h"
 #include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
@@ -19,8 +19,8 @@
 
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_WatchFieldGraphics_t {
-    QByteArrayData data[16];
-    char stringdata[168];
+    QByteArrayData data[18];
+    char stringdata[206];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -40,17 +40,20 @@ QT_MOC_LITERAL(7, 81, 10),
 QT_MOC_LITERAL(8, 92, 8),
 QT_MOC_LITERAL(9, 101, 1),
 QT_MOC_LITERAL(10, 103, 7),
-QT_MOC_LITERAL(11, 111, 16),
-QT_MOC_LITERAL(12, 128, 10),
-QT_MOC_LITERAL(13, 139, 2),
-QT_MOC_LITERAL(14, 142, 15),
-QT_MOC_LITERAL(15, 158, 9)
+QT_MOC_LITERAL(11, 111, 19),
+QT_MOC_LITERAL(12, 131, 17),
+QT_MOC_LITERAL(13, 149, 16),
+QT_MOC_LITERAL(14, 166, 10),
+QT_MOC_LITERAL(15, 177, 2),
+QT_MOC_LITERAL(16, 180, 15),
+QT_MOC_LITERAL(17, 196, 9)
     },
     "WatchFieldGraphics\0initializeQVectors\0"
     "\0const char*\0filename\0updateGUI\0"
     "drawBounds\0setCounter\0long int\0c\0"
-    "getSize\0updateRobotState\0RobotState\0"
-    "st\0updateBallState\0BallState"
+    "getSize\0changeCyrusToYellow\0"
+    "changeCyrusToBlue\0updateRobotState\0"
+    "RobotState\0st\0updateBallState\0BallState"
 };
 #undef QT_MOC_LITERAL
 
@@ -60,7 +63,7 @@ static const uint qt_meta_data_WatchFieldGraphics[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-       7,   14, // methods
+       9,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -68,13 +71,15 @@ static const uint qt_meta_data_WatchFieldGraphics[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    1,   49,    2, 0x0a /* Public */,
-       5,    0,   52,    2, 0x0a /* Public */,
-       6,    0,   53,    2, 0x0a /* Public */,
-       7,    1,   54,    2, 0x0a /* Public */,
-      10,    0,   57,    2, 0x0a /* Public */,
-      11,    1,   58,    2, 0x0a /* Public */,
-      14,    1,   61,    2, 0x0a /* Public */,
+       1,    1,   59,    2, 0x0a /* Public */,
+       5,    0,   62,    2, 0x0a /* Public */,
+       6,    0,   63,    2, 0x0a /* Public */,
+       7,    1,   64,    2, 0x0a /* Public */,
+      10,    0,   67,    2, 0x0a /* Public */,
+      11,    0,   68,    2, 0x0a /* Public */,
+      12,    0,   69,    2, 0x0a /* Public */,
+      13,    1,   70,    2, 0x0a /* Public */,
+      16,    1,   73,    2, 0x0a /* Public */,
 
  // slots: parameters
     QMetaType::Void, 0x80000000 | 3,    4,
@@ -82,8 +87,10 @@ static const uint qt_meta_data_WatchFieldGraphics[] = {
     QMetaType::Void,
     QMetaType::Void, 0x80000000 | 8,    9,
     0x80000000 | 8,
-    QMetaType::Void, 0x80000000 | 12,   13,
-    QMetaType::Void, 0x80000000 | 15,   13,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void, 0x80000000 | 14,   15,
+    QMetaType::Void, 0x80000000 | 17,   15,
 
        0        // eod
 };
@@ -99,8 +106,10 @@ void WatchFieldGraphics::qt_static_metacall(QObject *_o, QMetaObject::Call _c, i
         case 3: _t->setCounter((*reinterpret_cast< long int(*)>(_a[1]))); break;
         case 4: { long int _r = _t->getSize();
             if (_a[0]) *reinterpret_cast< long int*>(_a[0]) = _r; }  break;
-        case 5: _t->updateRobotState((*reinterpret_cast< const RobotState(*)>(_a[1]))); break;
-        case 6: _t->updateBallState((*reinterpret_cast< const BallState(*)>(_a[1]))); break;
+        case 5: _t->changeCyrusToYellow(); break;
+        case 6: _t->changeCyrusToBlue(); break;
+        case 7: _t->updateRobotState((*reinterpret_cast< const RobotState(*)>(_a[1]))); break;
+        case 8: _t->updateBallState((*reinterpret_cast< const BallState(*)>(_a[1]))); break;
         default: ;
         }
     }
@@ -131,13 +140,13 @@ int WatchFieldGraphics::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 7)
+        if (_id < 9)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 7;
+        _id -= 9;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 7)
+        if (_id < 9)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 7;
+        _id -= 9;
     }
     return _id;
 }
