@@ -893,7 +893,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        mainToolsSW->setCurrentIndex(0);
+        mainToolsSW->setCurrentIndex(4);
         mainWidgetsSW->setCurrentIndex(0);
         scriptEditorTWg->setCurrentIndex(0);
         aiMainTabWg->setCurrentIndex(0);
@@ -977,15 +977,15 @@ public:
         textEdit_2->setHtml(QApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">refereebox container</p></body></html>", 0));
+"</style></head><body style=\" font-family:'Cantarell'; font-size:11pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Ubuntu';\">refereebox container</span></p></body></html>", 0));
         scriptEditorTWg->setTabText(scriptEditorTWg->indexOf(tab), QApplication::translate("MainWindow", "Tab 1", 0));
         aiMainTabWg->setTabText(aiMainTabWg->indexOf(tab_2), QApplication::translate("MainWindow", "Tab 1", 0));
         testTextEdit_1->setHtml(QApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Temporal for Hardware page</p></body></html>", 0));
+"</style></head><body style=\" font-family:'Cantarell'; font-size:11pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Ubuntu';\">Temporal for Hardware page</span></p></body></html>", 0));
         windowButtonsToolBar->setWindowTitle(QApplication::translate("MainWindow", "toolBar", 0));
     } // retranslateUi
 
